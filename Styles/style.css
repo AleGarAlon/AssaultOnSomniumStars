@@ -36,7 +36,7 @@ h1 {
 
 
 #initialScreen {
-    display: none;
+    display: block;
     font-size: 1.5rem;
     color:rgb(255, 0, 0);
 
@@ -48,7 +48,7 @@ h1 {
     
 }
 
-.starBtn {
+#starBtn {
     height: 30px;
     width: 150px;
     color:rgb(223, 253, 0);
@@ -59,16 +59,20 @@ h1 {
 #gameScreen {
     display: none;
     height: 600px;
-    width: 800px;
+    width: 1000px;
     background-image: url(../Images/forestMap.webp);
     background-repeat: no-repeat;
     background-size: cover;
-    box-shadow: rgb(230, 16, 16) 5px 5px 50px
+    box-shadow: rgb(230, 16, 16) 5px 5px 50px;
+    cursor:  crosshair;
+    position: relative;
     
 }
 
 #lostScreen {
-    display: flex;
+    
+
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -85,7 +89,7 @@ h1 {
     font-size: 2rem;
     
 }
-.restartButton {
+#restartButton {
     height: 30px;
     width: 150px;
     color:rgb(223, 253, 0);
