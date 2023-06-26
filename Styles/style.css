@@ -89,12 +89,33 @@ h1 {
     font-size: 2rem;
     
 }
-#restartButton {
+.restartButton {
     height: 30px;
     width: 150px;
     color:rgb(223, 253, 0);
     border-radius: 6px;
     background-color: hsl(0, 100%, 35%);
+}
+
+#winScreen {
+    
+
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 200px;
+    background-image: url(../Images/back3.jpg);
+    height: 450px;
+    width: 750px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: rgb(0, 0, 0) 10px 10px 80px;
+    color: rgb(255, 4, 4);
+    text-shadow: -1px 0 rgb(255, 244, 38), 0 1px rgb(255, 244, 38), 1px 0 rgb(255, 244, 38), 0 -1px rgb(255, 244, 38);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    
 }
 
 

@@ -11,8 +11,9 @@ class Game {
         this.deadCSM = 0
         this.gameScore = document.getElementById("score")
         this.gameOver = false;
-        //this.win = false
-        this.abbadonLife = 10
+        this.winScreen = document.getElementById("winScreen")
+        
+       
 
 
 
@@ -51,7 +52,7 @@ class Game {
             }
         }
 
-        if (this.loopID % 300 === 0) {
+        if (this.loopID % 30000 === 0) {
             this.enemy2.push(new enemy2(this.gameScreen))
             
             for (let i = 0; i < this.enemy2.length; i += 1) {
@@ -67,6 +68,12 @@ class Game {
 
         if (this.deadCSM === 1){
             this.abbadon.push(new abbadon(this.gameScreen))
+            if (this.win === true) {
+                cancelAnimationFrame(this.loopID);
+                this.gameScreen.style.display = "none";
+                this.winScreen.style.display = 'flex';
+            }
+            
             
         }
 

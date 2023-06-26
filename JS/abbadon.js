@@ -1,5 +1,5 @@
 class abbadon {
-    constructor(gameScreen){
+    constructor(gameScreen, loopID){
     this.gameScreen = gameScreen;
     this.width = 150
     this.height = 150
@@ -7,7 +7,10 @@ class abbadon {
     this.top = 200
     this.element = document.createElement("img")
     this.inDom = false
-    this.life = 10
+    this.abbadonLife = 10
+    this.winScreen = document.getElementById("winScreen")
+    this.loopID = loopID
+    //this.win = false
     
 
     this.element.src = './images/abbadon.png'
@@ -28,7 +31,12 @@ class abbadon {
     this.element.addEventListener("click", (e) => {
        
        console.log (this.abbadonLife)
-       
+       this.abbadonLife -= 1
+       if (this.abbadonLife === 0) {
+        cancelAnimationFrame(this.loopID);
+            this.gameScreen.style.display = "none";
+            this.winScreen.style.display = 'flex';
+       }
 
 
     })
