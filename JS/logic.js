@@ -14,11 +14,8 @@ window.addEventListener("load", () => {
         game.start()
 
 
-      
     }
-
     
-
-
+    
 
   });

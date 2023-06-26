@@ -1,14 +1,15 @@
-class enemy1 {
+class enemy2 {
     constructor(gameScreen){
     this.gameScreen = gameScreen;
-    this.width = 50
-    this.height = 100
-    this.left = 760
+    this.width = 80
+    this.height = 80
+    this.left = 720
     this.top = Math.floor(Math.random() * 500)
     this.element = document.createElement("img")
     this.inDom = false
+    
 
-    this.element.src = './images/chaosSM1.png'
+    this.element.src = './images/chaosSM2.png'
 
 
     this.element.style.width = `${this.width}px`;
@@ -32,8 +33,7 @@ class enemy1 {
 
 
     move() {
-        this.left -= 1
-        
+        this.left -= 1.5
 
         this.update()
   

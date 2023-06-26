@@ -1,14 +1,16 @@
-class enemy1 {
+class abbadon {
     constructor(gameScreen){
     this.gameScreen = gameScreen;
-    this.width = 50
-    this.height = 100
-    this.left = 760
-    this.top = Math.floor(Math.random() * 500)
+    this.width = 150
+    this.height = 150
+    this.left = 650
+    this.top = 200
     this.element = document.createElement("img")
     this.inDom = false
+    this.life = 10
+    
 
-    this.element.src = './images/chaosSM1.png'
+    this.element.src = './images/abbadon.png'
 
 
     this.element.style.width = `${this.width}px`;
@@ -24,16 +26,17 @@ class enemy1 {
     this.inDom = true
 
     this.element.addEventListener("click", (e) => {
-        this.element.remove()
-        this.inDom = false
+       
+       console.log (this.abbadonLife)
+       
+
 
     })
 }
 
 
     move() {
-        this.left -= 1
-        
+        this.left -= 0.2
 
         this.update()
   
