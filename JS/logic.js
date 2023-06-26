@@ -13,5 +13,12 @@ window.addEventListener("load", () => {
         game = new Game()
         game.start()
 
+
+      
     }
+
+    
+
+
+
   });
