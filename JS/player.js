@@ -8,7 +8,7 @@ class Player {
     this.left = 0
 
 
-    this.element.src = './images/BA.png'
+    this.element.src = './Images/BA.png'
 
     this.element.style.width = `${this.width}px`;
     this.element.style.height =`${this.height}px`;
