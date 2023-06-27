@@ -1,6 +1,7 @@
 window.addEventListener("load", () => {
     const startButton = document.getElementById("starBtn");
     const restartButton = document.getElementById("restartButton");
+    const reloadButton = document.getElementById("reloadButton");
     let game;
   
     startButton.addEventListener("click", function () {
@@ -13,9 +14,16 @@ window.addEventListener("load", () => {
         game = new Game()
         game.start()
 
-
     }
     
-    
+   restartButton.addEventListener("click", function () {
+      location.reload()
+
+    });
+
+    reloadButton.addEventListener("click", function () {
+      location.reload()
+
+    });
 
   });

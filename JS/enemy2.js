@@ -33,7 +33,7 @@ class enemy2 {
 
 
     move() {
-        this.left -= 1.5
+        this.left -= 0.8
 
         this.update()
   
