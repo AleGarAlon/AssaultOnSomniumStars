@@ -1,7 +1,7 @@
 class Player {
     constructor(gameScreen) {
     this.gameScreen = gameScreen
-    this.width = 50
+    this.width = 60
     this.height = 100
     this.element = document.createElement("img")
     this.top = 260
