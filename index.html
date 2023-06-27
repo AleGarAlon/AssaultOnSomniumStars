@@ -20,7 +20,11 @@
         </div>    
         
         <div id="gameScreen">
-          
+          <audio id="gameSound" src="/sounds/Waaagh.mp3">
+          <audio id="bolterSound" src="">
+          <audio id="forTheEmperor" src="/sounds/forTheEmperor.mp3">
+          <audio id="soulClaim" src="/sounds/claimed.mp3"></audio>
+            </audio>  
 
 
         </div>
@@ -31,7 +35,8 @@
         <div id ="lostScreen">
             <p>Chaos has won!</p>
             <button id="restartButton"> Restart</button>
-            <p>Final Score: <span class="score">0</span></p>
+            <p>Final Score: <span class="loseScore">0</span></p>
+            <audio id="loseSound" src="/sounds/AftermathofDefeat.mp3"></audio>
 
 
         </div>
@@ -41,7 +46,7 @@
             <p>Blood Angels wins!</p>
           
           <button id="reloadButton"> Restart</button>
-          <p>Final Score: <span class="score">0</span></p>
+          <p>Final Score: <span class="winScore">0</span></p>
 
 
       

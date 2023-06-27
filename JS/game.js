@@ -3,9 +3,15 @@ class Game {
         this.initialScreen = document.getElementById("initialScreen")
         this.gameScreen = document.getElementById("gameScreen")
         this.lostScreen = document.getElementById("lostScreen")
+        this.gameSound = document.getElementById("gameSound")
+        this.loseSound = document.getElementById("loseSound")
+        this.forTheEmperor = document.getElementById("forTheEmperor")
+        this.soulClaim = document.getElementById("soulClaim")
         this.player = new Player(this.gameScreen)
         this.enemy1 = []
-        this.score = document.querySelectorAll(".score")
+        this.loseScore = document.getElementById("loseScore")
+        this.winScore = document.getElementById("winScore")
+
         this.enemy2 = []
         this.abbadon = []
         this.loopID
@@ -16,10 +22,11 @@ class Game {
         this.win = false
 
 
-        this.score.forEach(element => {
-            element.textContent = `${this.deadCSM}`;
-          }); 
-        
+    
+        this.gameSound.volume = 0.1;
+        this.loseSound.volume = 0.2;
+        this.winScore = `${this.deadCSM}`
+        this.loseScore = `${this.deadCSM}`
        
 
 
@@ -29,17 +36,14 @@ class Game {
     start() {
         this.initialScreen.style.display = 'none'
         this.gameScreen.style.display = "block"
+        this.forTheEmperor.play()
+        this.gameSound.play()
 
 
         this.loop()
     }
 
-    /*lose() {
-
-        this.gameScreen.style.display = "none";
-        this.lostScreen.style.display = 'flex';
-        cancelAnimationFrame(this.loopID);
-    }*/
+   
 
 
     loop() {
@@ -95,12 +99,17 @@ class Game {
             cancelAnimationFrame(() => this.loopID)
             this.gameScreen.style.display = "none";
             this.winScreen.style.display = 'flex';
+            this.gameSound.pause()
+            this.loseSound.play()
         }
 
         else if (this.gameOver === true) {
             cancelAnimationFrame(() => this.loopID);
             this.gameScreen.style.display = "none";
             this.lostScreen.style.display = 'flex';
+            this.gameSound.pause()
+            this.soulClaim.play()
+            this.loseSound.play()
         }
         
         else if (!this.gameOver || !this.win) {
