@@ -8,7 +8,7 @@ class enemy1 {
     this.element = document.createElement("img")
     this.inDom = false
 
-    this.element.src = '../images/chaosSM1.png'
+    this.element.src = './Images/chaosSM1.png'
 
 
     this.element.style.width = `${this.width}px`;

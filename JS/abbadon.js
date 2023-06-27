@@ -12,7 +12,7 @@ class abbadon {
     
     
 
-    this.element.src = '../images/abbadon.png'
+    this.element.src = './Images/abbadon.png'
 
 
     this.element.style.width = `${this.width}px`;

@@ -9,7 +9,7 @@ class enemy2 {
     this.inDom = false
     
 
-    this.element.src = '../images/chaosSM2.png'
+    this.element.src = './Images/chaosSM2.png'
 
 
     this.element.style.width = `${this.width}px`;
