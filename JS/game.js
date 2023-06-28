@@ -106,7 +106,7 @@ class Game {
 
         }
 
-        if (this.loopID % 1000 === 0){
+        if (this.loopID % 5000 === 0){
             this.abaddon.push(new abaddon(this.gameScreen)) 
             
         }
