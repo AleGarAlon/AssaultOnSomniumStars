@@ -141,3 +141,27 @@ h1 {
     font-weight: bold;
     text-transform: uppercase;
 }
+
+#scoreScreen {
+    height: 200px;
+    width: 300px;
+    display: none;
+    flex-direction: column;
+    background-image: url(../Images/aquilaImperialis2.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-weight: 800;
+    justify-content: center;
+    color: rgb(255, 4, 4);
+    margin-top: -50px;  
+}
+
+#marker {
+    padding-top: 30px;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+

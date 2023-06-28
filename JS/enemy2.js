@@ -28,6 +28,7 @@ class enemy2 {
     this.element.addEventListener("click", (e) => {
         this.element.remove()
         this.inDom = false
+       
         this.bolterSound.play()
         
 

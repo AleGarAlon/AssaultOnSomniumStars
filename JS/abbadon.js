@@ -34,6 +34,7 @@ class abbadon {
        
        this.abbadonLife -= 1
        console.log(this.abbadonLife)
+       
        this.bolterSound.play()
        
        

@@ -4,6 +4,7 @@ class Game {
         this.gameScreen = document.getElementById("gameScreen")
         this.lostScreen = document.getElementById("lostScreen")
         this.winScreen = document.getElementById("winScreen")
+        this.scoreScreen = document.getElementById("scoreScreen")
         this.gameSound = document.getElementById("gameSound")
         this.loseSound = document.getElementById("loseSound")
         this.winSound = document.getElementById("winSound")
@@ -14,6 +15,8 @@ class Game {
         this.enemy1 = []
         this.loseScore = document.getElementById("loseScore")
         this.winScore = document.getElementById("winScore")
+        this.marker = document.getElementById("marker")
+
 
         this.enemy2 = []
         this.abbadon = []
@@ -35,6 +38,7 @@ class Game {
 
         this.winScore.innerHTML = `${this.deadCSM}`
         this.loseScore.innerHTML = `${this.deadCSM}`
+        this.marker.innerHTML = `${this.deadCSM}`
        
 
 
@@ -44,6 +48,7 @@ class Game {
     start() {
         this.initialScreen.style.display = 'none'
         this.gameScreen.style.display = "block"
+        this.scoreScreen.style.display = "flex"
         this.forTheEmperor.play()
         this.gameSound.play()
 
@@ -58,6 +63,7 @@ class Game {
 
     loop() {
         this.update()
+        this.marker.innerHTML = `${this.deadCSM}`
         //console.log(this.loopID)
         this.winScore.innerHTML = `${this.deadCSM}`
         this.loseScore.innerHTML = `${this.deadCSM}`
@@ -107,6 +113,7 @@ class Game {
        if (this.win === true) {
             cancelAnimationFrame(() => this.loopID)
             this.gameScreen.style.display = "none";
+            this.scoreScreen.style.display = "none";
             this.winScreen.style.display = 'flex';
             this.gameSound.pause()
             this.winSound.play()
@@ -115,6 +122,7 @@ class Game {
         else if (this.gameOver === true) {
             cancelAnimationFrame(() => this.loopID);
             this.gameScreen.style.display = "none";
+            this.scoreScreen.style.display = "none";
             this.lostScreen.style.display = 'flex';
             this.gameSound.pause()
             this.soulClaim.play()
