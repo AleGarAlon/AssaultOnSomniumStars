@@ -1,4 +1,4 @@
-class abbadon {
+class abaddon {
     constructor(gameScreen){
     this.gameScreen = gameScreen;
     this.width = 150
@@ -7,14 +7,14 @@ class abbadon {
     this.top = 200
     this.element = document.createElement("img")
     this.inDom = false
-    this.abbadonLife = 30
+    this.abaddonLife = 30
     this.bolterSound = document.getElementById("bolterSound")
     this.bolterSound.volume = 0.2;
 
     
     
 
-    this.element.src = './Images/abbadon.png'
+    this.element.src = './Images/abaddon.png'
 
 
     this.element.style.width = `${this.width}px`;
@@ -32,8 +32,8 @@ class abbadon {
     this.element.addEventListener("click", (e) => {
        
        
-       this.abbadonLife -= 1
-       console.log(this.abbadonLife)
+       this.abaddonLife -= 1
+       console.log(this.abaddonLife)
        
        this.bolterSound.play()
        

@@ -19,7 +19,7 @@ class Game {
 
 
         this.enemy2 = []
-        this.abbadon = []
+        this.abaddon = []
         this.loopID
         this.deadCSM = 0
         //this.gameScore = document.getElementById("score")
@@ -99,19 +99,21 @@ class Game {
         }
 
 
-        if (this.abbadon.length === 1 && this.abbadon[0].abbadonLife <= 0){
-            this.abbadon.splice(0, 1)
+        if (this.abaddon.length === 1 && this.abaddon[0].abaddonLife <= 0){
+            this.abaddon.splice(0, 1)
+            
             this.win = true
 
         }
 
-        if (this.loopID % 5000 === 0){
-            this.abbadon.push(new abbadon(this.gameScreen)) 
+        if (this.loopID % 1000 === 0){
+            this.abaddon.push(new abaddon(this.gameScreen)) 
             
         }
 
        if (this.win === true) {
             cancelAnimationFrame(() => this.loopID)
+            
             this.gameScreen.style.display = "none";
             this.scoreScreen.style.display = "none";
             this.winScreen.style.display = 'flex';
@@ -157,10 +159,10 @@ class Game {
                 this.gameOver = true
             }
         }
-        for (let i = 0; i < this.abbadon.length; i += 1) {
-            this.abbadon[i].move()
+        for (let i = 0; i < this.abaddon.length; i += 1) {
+            this.abaddon[i].move()
 
-            if (this.abbadon[0].left < 0) {
+            if (this.abaddon[0].left < 0) {
             this.gameOver = true
             }
         }
