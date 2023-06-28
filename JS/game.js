@@ -3,8 +3,11 @@ class Game {
         this.initialScreen = document.getElementById("initialScreen")
         this.gameScreen = document.getElementById("gameScreen")
         this.lostScreen = document.getElementById("lostScreen")
+        this.winScreen = document.getElementById("winScreen")
         this.gameSound = document.getElementById("gameSound")
         this.loseSound = document.getElementById("loseSound")
+        this.winSound = document.getElementById("winSound")
+        this.bolterSound = document.getElementById("bolterSound")
         this.forTheEmperor = document.getElementById("forTheEmperor")
         this.soulClaim = document.getElementById("soulClaim")
         this.player = new Player(this.gameScreen)
@@ -16,17 +19,22 @@ class Game {
         this.abbadon = []
         this.loopID
         this.deadCSM = 0
-        this.gameScore = document.getElementById("score")
+        //this.gameScore = document.getElementById("score")
         this.gameOver = false;
-        this.winScreen = document.getElementById("winScreen")
         this.win = false
 
 
     
         this.gameSound.volume = 0.1;
         this.loseSound.volume = 0.2;
-        this.winScore = `${this.deadCSM}`
-        this.loseScore = `${this.deadCSM}`
+        this.winSound.volume = 0.2;
+        this.forTheEmperor.volume = 0.3;
+        this.soulClaim.volume = 0.2;
+        this.bolterSound.volume = 0.2;
+
+
+        this.winScore.innerHTML = `${this.deadCSM}`
+        this.loseScore.innerHTML = `${this.deadCSM}`
        
 
 
@@ -43,12 +51,16 @@ class Game {
         this.loop()
     }
 
-   
+
+    
+
 
 
     loop() {
         this.update()
         //console.log(this.loopID)
+        this.winScore.innerHTML = `${this.deadCSM}`
+        this.loseScore.innerHTML = `${this.deadCSM}`
         if (this.loopID % 100 === 0 ) {
             this.enemy1.push(new enemy1(this.gameScreen))
             
@@ -58,7 +70,7 @@ class Game {
         for (let i = 0; i < this.enemy1.length; i += 1) {
             this.enemy1[i].move()
             if (!this.enemy1[i].inDom) {
-                //console.log(this.deadCSM)
+                
                 this.enemy1.splice(i, 1)
                 this.deadCSM += 1
                                   
@@ -75,10 +87,7 @@ class Game {
             this.enemy2[i].move()
             if (!this.enemy2[i].inDom) {            
                 this.enemy2.splice(i, 1)
-                this.deadCSM += 1
-                
-
-                console.log(`You have killed${this.deadCSM}`)                    
+                this.deadCSM += 1                                   
                 i -= 1
             }                      
         }
@@ -100,7 +109,7 @@ class Game {
             this.gameScreen.style.display = "none";
             this.winScreen.style.display = 'flex';
             this.gameSound.pause()
-            this.loseSound.play()
+            this.winSound.play()
         }
 
         else if (this.gameOver === true) {

@@ -7,7 +7,8 @@ class enemy2 {
     this.top = Math.floor(Math.random() * 500)
     this.element = document.createElement("img")
     this.inDom = false
-    
+    this.bolterSound = document.getElementById("bolterSound")
+    this.bolterSound.volume = 0.2;
 
     this.element.src = './Images/chaosSM2.png'
 
@@ -27,6 +28,8 @@ class enemy2 {
     this.element.addEventListener("click", (e) => {
         this.element.remove()
         this.inDom = false
+        this.bolterSound.play()
+        
 
     })
 }

@@ -8,6 +8,8 @@ class abbadon {
     this.element = document.createElement("img")
     this.inDom = false
     this.abbadonLife = 30
+    this.bolterSound = document.getElementById("bolterSound")
+    this.bolterSound.volume = 0.2;
 
     
     
@@ -32,6 +34,8 @@ class abbadon {
        
        this.abbadonLife -= 1
        console.log(this.abbadonLife)
+       this.bolterSound.play()
+       
        
 
 

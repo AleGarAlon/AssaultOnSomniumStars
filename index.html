@@ -17,15 +17,17 @@
             "Click" to shot your enemies
           </p>
           
-          <button id="starBtn">Start</button> 
+          <button id="starBtn">For the emperor!</button> 
         </div>    
         
         <div id="gameScreen">
           <audio id="gameSound" src="./sounds/Waaagh.mp3">
-          <audio id="bolterSound" src="">
+          <audio id="bolterSound" src="./sounds/GunShot.mp3">
           <audio id="forTheEmperor" src="./sounds/forTheEmperor.mp3">
           <audio id="soulClaim" src="./sounds/claimed.mp3"></audio>
-            </audio>  
+          <audio id="batman" src="./sounds/Batman.mp3"></audio>
+
+          </audio>  
 
 
         </div>
@@ -36,18 +38,19 @@
         <div id ="lostScreen">
             <p>Chaos has won!</p>
             <button id="restartButton"> Restart</button>
-            <p>Final Score: <span class="loseScore">0</span></p>
+            <p>Final Score: <span id="loseScore"></span></p>
             <audio id="loseSound" src="./sounds/AftermathofDefeat.mp3"></audio>
 
 
         </div>
 
         <div id ="winScreen">
-          <p>For the Emperor!</p>
+          
             <p>Blood Angels wins!</p>
           
           <button id="reloadButton"> Restart</button>
-          <p>Final Score: <span class="winScore">0</span></p>
+          <audio id="winSound" src="./sounds/Children of the Omnissiah.mp3"></audio>
+          <p>Final Score: <span id="winScore"></span></p>
 
 
       
