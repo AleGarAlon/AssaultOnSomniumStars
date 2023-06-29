@@ -36,7 +36,7 @@ class Game {
         this.bolterSound.volume = 0.2;
 
 
-        this.winScore.innerHTML = `${this.deadCSM}`
+        
         this.loseScore.innerHTML = `${this.deadCSM}`
         this.marker.innerHTML = `${this.deadCSM}`
        
@@ -112,8 +112,9 @@ class Game {
         }
 
        if (this.win === true) {
+            this.deadCSM += 30
+            this.winScore.innerHTML = `${this.deadCSM}`
             cancelAnimationFrame(() => this.loopID)
-            
             this.gameScreen.style.display = "none";
             this.scoreScreen.style.display = "none";
             this.winScreen.style.display = 'flex';
