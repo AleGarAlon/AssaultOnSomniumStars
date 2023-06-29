@@ -10,7 +10,7 @@ class abaddon {
     this.abaddonLife = 30
     this.bolterSound = document.getElementById("bolterSound")
     this.bolterSound.volume = 0.2;
-    this.element.src = './images/abaddon.png'
+    this.element.src = './Images/abaddon.png'
     this.inDom = true
 
     this.element.style.width = `${this.width}px`;

@@ -8,7 +8,7 @@ body {
     padding: 0;
     margin: 0;
     height: 100vh;
-    background-image: url(../images/backgorund.jpg);
+    background-image: url(../Images/backgorund.jpg);
     background-size: cover;
 }
 
@@ -57,7 +57,7 @@ h1 {
     display: none;
     height: 600px;
     width: 1000px;
-    background-image: url(../images/mapa2.webp);
+    background-image: url(../Images/mapa2.webp);
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: rgb(230, 16, 16) 5px 5px 50px;
@@ -71,7 +71,7 @@ h1 {
     justify-content: space-between;
     align-items: center;
     margin-top: 200px;
-    background-image: url(../images/mtg-warhammer-40k-artwork-abaddon-the-despoiler.webp);
+    background-image: url(../Images/mtg-warhammer-40k-artwork-abaddon-the-despoiler.webp);
     height: 450px;
     width: 800px;
     background-size: contain;
@@ -100,7 +100,7 @@ h1 {
     justify-content: space-between;
     align-items: center;
     margin-top: 200px;
-    background-image: url(../images/back3.jpg);
+    background-image: url(../Images/back3.jpg);
     height: 450px;
     width: 750px;
     background-size: cover;
@@ -130,7 +130,7 @@ h1 {
     width: 300px;
     display: none;
     flex-direction: column;
-    background-image: url(../images/aquilaImperialis2.png);
+    background-image: url(../Images/aquilaImperialis2.png);
     background-size:contain;
     background-repeat: no-repeat;
     background-position: center;

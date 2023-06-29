@@ -9,7 +9,7 @@ class enemy2 {
     this.inDom = false
     this.bolterSound = document.getElementById("bolterSound")
     this.bolterSound.volume = 0.2;
-    this.element.src = './images/chaosSM2.png'
+    this.element.src = './Images/chaosSM2.png'
     this.inDom = true
 
     this.element.style.width = `${this.width}px`;
