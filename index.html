@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./Styles/style.css" />
-    
+    <link rel="stylesheet" href="./styles/style.css" />
     <title>Document</title>
 </head>
 <body>
@@ -12,11 +11,10 @@
     <div id="screen">
 
         <div id="initialScreen"> 
-          <img class="BA-Emblem" src="./Images/BA-Emblem-removebg-preview.png" alt="BA-Emblem"/>
+          <img class="BA-Emblem" src="./images/BA-Emblem-removebg-preview.png" alt="BA-Emblem"/>
           <p>
             "Click" to shoot your enemies
           </p>
-          
           <button id="starBtn">For the emperor!</button> 
         </div>    
         
@@ -26,53 +24,34 @@
           <audio id="forTheEmperor" src="./sounds/forTheEmperor.mp3">
           <audio id="soulClaim" src="./sounds/claimed.mp3"></audio>
           <audio id="batman" src="./sounds/Batman.mp3"></audio>
-
-          </audio>  
-
-
         </div>
         
-
-
-
         <div id ="lostScreen">
             <p>Chaos has won!</p>
             <button id="restartButton"> Restart</button>
             <p>Final Score: <span id="loseScore"></span></p>
             <audio id="loseSound" src="./sounds/AftermathofDefeat.mp3"></audio>
-
-
         </div>
 
         <div id ="winScreen">
-          
             <p>Blood Angels wins!</p>
-          
           <button id="reloadButton"> Restart</button>
           <audio id="winSound" src="./sounds/Children of the Omnissiah.mp3"></audio>
           <p>Final Score: <span id="winScore"></span></p>
 
-
-      
-
       </div>
 
     </div>
-
    <div id="scoreScreen">
-   
     <p id="marker">0</p>
-    
-    
-
    </div> 
 
-    <script type="text/javascript" src="./JS/game.js"></script>
-    <script type="text/javascript" src="./JS/logic.js"></script>
-    <script type="text/javascript" src="./JS/player.js"></script>
-    <script type="text/javascript" src="./JS/enemy1.js"></script>
-    <script type="text/javascript" src="./JS/enemy2.js"></script>
-    <script type="text/javascript" src="./JS/abaddon.js"></script>
+    <script type="text/javascript" src="./js/game.js"></script>
+    <script type="text/javascript" src="./js/script.js"></script>
+    <script type="text/javascript" src="./js/player.js"></script>
+    <script type="text/javascript" src="./js/enemy1.js"></script>
+    <script type="text/javascript" src="./js/enemy2.js"></script>
+    <script type="text/javascript" src="./js/abaddon.js"></script>
 
 
 </body>

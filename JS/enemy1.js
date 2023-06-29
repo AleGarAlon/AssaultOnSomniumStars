@@ -9,44 +9,30 @@ class enemy1 {
     this.inDom = false
     this.bolterSound = document.getElementById("bolterSound")
     this.bolterSound.volume = 0.2;
-
-    this.element.src = './Images/chaosSM1.png'
-
+    this.element.src = './images/chaosSM1.png'
+    this.inDom = true
 
     this.element.style.width = `${this.width}px`;
     this.element.style.height =`${this.height}px`;
-
     this.element.style.top = `${this.top}px`
     this.element.style.left = `${this.left}px`
-
-
     this.element.style.position = "absolute"
 
     this.gameScreen.appendChild(this.element)
-    this.inDom = true
+    
 
     this.element.addEventListener("click", (e) => {
         this.element.remove()
         this.inDom = false
-        
         this.bolterSound.play()
-        
-
     })
 }
-
-
     move() {
         this.left -= 0.5
-        
-
         this.update()
-  
     }
 
-    update() {
-       
+    update() {    
         this.element.style.left = `${this.left}px`
-
     }
 }

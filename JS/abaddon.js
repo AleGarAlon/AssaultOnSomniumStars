@@ -10,50 +10,30 @@ class abaddon {
     this.abaddonLife = 30
     this.bolterSound = document.getElementById("bolterSound")
     this.bolterSound.volume = 0.2;
-
-    
-    
-
-    this.element.src = './Images/abaddon.png'
-
+    this.element.src = './images/abaddon.png'
+    this.inDom = true
 
     this.element.style.width = `${this.width}px`;
     this.element.style.height =`${this.height}px`;
-
     this.element.style.top = `${this.top}px`
     this.element.style.left = `${this.left}px`
-
-
     this.element.style.position = "absolute"
-
     this.gameScreen.appendChild(this.element)
-    this.inDom = true
+    
 
-    this.element.addEventListener("click", (e) => {
-       
-       
+    this.element.addEventListener("click", (e) => { 
        this.abaddonLife -= 1
-       console.log(this.abaddonLife)
-       
+       console.log(this.abaddonLife)  
        this.bolterSound.play()
-       
-       
-
-
-
     })
 }
 
-
-    move() {
+move() {
         this.left -= 0.3
-
         this.update()
-  
     }
 
     update() {
-       
         this.element.style.left = `${this.left}px`
 
     }
